@@ -47,3 +47,5 @@ fun String.showTips(context: Context){
         show()
     }
 }
+
+val netImg = "https://raw.githubusercontent.com/darryrzhong/FluxImageLoader/refs/heads/main/img_github.png"
