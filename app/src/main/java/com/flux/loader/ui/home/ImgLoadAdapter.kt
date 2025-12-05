@@ -6,8 +6,12 @@ import android.widget.ImageView
 import com.chad.library.adapter4.BaseQuickAdapter
 import com.chad.library.adapter4.viewholder.QuickViewHolder
 import com.flux.img.R
+import com.flux.img.loadBlur
 import com.flux.img.loadCircle
+import com.flux.img.loadRounded
+import com.flux.img.transform.RoundedCornersType
 import com.flux.loader.ImgData
+import com.flux.loader.dp
 import com.flux.loader.netImg
 
 /**
@@ -36,6 +40,46 @@ class ImgLoadAdapter : BaseQuickAdapter<ImgData, QuickViewHolder>() {
         val ivImg = holder.getView<ImageView>(com.flux.loader.R.id.iv_img)
         item?.let { data ->
             when (data.type) {
+                0 -> {
+                    ivImg.loadRounded(netImg, 12f.dp.toFloat())
+                }
+
+                1 -> {
+                    ivImg.loadRounded(
+                        netImg,
+                        12f.dp.toFloat(),
+                        cornersType = RoundedCornersType.LEFT
+                    )
+                }
+
+                2 -> {
+                    ivImg.loadCircle(netImg)
+                }
+
+                3 -> {
+                    ivImg.loadBlur(netImg, 10f)
+                }
+
+                4 -> {
+                    ivImg.loadBlur(netImg, 10f, 12f.dp.toFloat())
+                }
+
+                5 -> {
+                    ivImg.loadBlur(netImg, 10f, -1f.dp.toFloat())
+                }
+
+                6 -> {
+                    ivImg.loadCircle(netImg)
+                }
+
+                7 -> {
+                    ivImg.loadCircle(netImg)
+                }
+
+                8 -> {
+                    ivImg.loadCircle(netImg)
+                }
+
                 0 -> {
                     ivImg.loadCircle(netImg)
                 }

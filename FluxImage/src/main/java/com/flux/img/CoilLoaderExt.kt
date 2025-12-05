@@ -105,7 +105,7 @@ fun ImageView.loadRounded(
  *
  * */
 
-fun ImageView.loadBlurUrl(
+fun ImageView.loadBlur(
     data: Any?,
     blurRadius: Float = 10f,
     radius: Float = 0f,
@@ -117,6 +117,8 @@ fun ImageView.loadBlurUrl(
     transformations.add(BlurTransformation(context, blurRadius.requireBlurRadius()))
     if (radius > 0) {
         transformations.add(createRoundedCornersTransformation(cornersType, radius))
+    } else if (radius < 0) {
+        transformations.add(CircleCropTransformation())
     }
     return this.load(data) {
         placeholder(placeholderId)

@@ -48,4 +48,4 @@ fun String.showTips(context: Context){
     }
 }
 
-val netImg = "https://raw.githubusercontent.com/darryrzhong/FluxImageLoader/refs/heads/main/img_github.png"
+val netImg = "https://github.com/darryrzhong/FluxImageLoader/blob/main/img_face.jpg?raw=true"

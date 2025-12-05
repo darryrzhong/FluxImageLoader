@@ -50,7 +50,16 @@ class HomeFragment : Fragment() {
             }
         });
         binding.rvImg.adapter = adapter
-        adapter.submitList(arrayListOf(ImgData(0,"圆角")))
+        adapter.submitList(
+            arrayListOf(
+                ImgData(0, "圆角"),
+                ImgData(1, "左上圆角"),
+                ImgData(2, "圆形"),
+                ImgData(3, "高斯模糊"),
+                ImgData(4, "高斯模糊"),
+                ImgData(5, "高斯模糊"),
+            )
+        )
     }
 
 
