@@ -18,7 +18,7 @@ gms = "18.5.0"
 brvAdapter = "4.3.2"
 viewpager2 = "1.1.0"
 glideVersion = "5.0.5"
-glideWebpVersion = "2.6.4.16.0"
+glideWebpVersion = "2.7.4.16.0"
 coilVersion = "3.3.0"
 
 

@@ -105,8 +105,24 @@ class FluxImageLoader private constructor() {
         }
     }
 
+    /**
+     * 清除内存缓存
+     * */
     fun clearMemoryCache(context: Context) {
         context.imageLoader.memoryCache?.clear()
+    }
+
+    fun trimMemoryCache(context: Context) {
+        context.imageLoader.memoryCache?.apply {
+            trimToSize(maxSize.div(2))
+        }
+    }
+
+    /**
+     * 清除磁盘缓存
+     * */
+    fun clearDiskCache(context: Context) {
+        context.imageLoader.diskCache?.clear()
     }
 
 }

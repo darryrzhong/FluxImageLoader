@@ -199,7 +199,52 @@ val disposable = imageView.load(url)
 disposable.dispose()
 ```
 
+### 缓存清理
+
+`FluxImageLoader` 提供了手动管理缓存的方法，建议在 `Application` 的生命周期回调中合理调用以优化内存使用。
+
+```kotlin
+// 清除内存缓存 (建议在 onLowMemory 中调用)
+FluxImageLoader.getInstance().clearMemoryCache(context)
+
+// 清除磁盘缓存
+FluxImageLoader.getInstance().clearDiskCache(context)
+
+// 整理内存缓存 (建议在 onTrimMemory 中调用)
+FluxImageLoader.getInstance().trimMemoryCache(context)
+```
+
+示例 (在 Application 中):
+
+```kotlin
+override fun onLowMemory() {
+    super.onLowMemory()
+    // 系统内存紧张，立即清理内存缓存
+    FluxImageLoader.getInstance().clearMemoryCache(this)
+}
+
+override fun onTrimMemory(level: Int) {
+    super.onTrimMemory(level)
+    when (level) {
+        // App 切到后台，UI 不可见 || 后台 App 内存低
+        ComponentCallbacks2.TRIM_MEMORY_UI_HIDDEN, ComponentCallbacks2.TRIM_MEMORY_BACKGROUND -> {
+            FluxImageLoader.getInstance().trimMemoryCache(this)
+        }
+    }
+}
+```
+
 ## 注意事项
 
 - `@DrawableRes` 资源建议直接使用 `setImageResource`，使用加载器会产生不必要的开销，除非需要做图片变换。
 - 高斯模糊半径必须在 0-25 之间。
+- 由于Coil3库仅支持在 Android API 28 以上加载动态 WebP 图片,如果需要在 Android API 28 以下加载动态 WebP 图片，请自行依赖 Glide 及其 WebP 解码库。
+
+```kotlin
+def GLIDE_VERSION = "5.0.5"
+// webpdecoder
+implementation "com.github.zjupure:webpdecoder:2.7.4.16.0"
+// glide 4.10.0+
+implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+annotationProcessor "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
+```

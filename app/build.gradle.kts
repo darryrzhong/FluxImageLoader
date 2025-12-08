@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -70,6 +71,9 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(projects.fluxImage)
     implementation(libs.rv.adapter)
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+    implementation(libs.glide.webpdecoder)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
