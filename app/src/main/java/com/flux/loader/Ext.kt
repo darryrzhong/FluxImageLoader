@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.res.Resources
 import android.util.TypedValue
 import android.widget.Toast
+import java.io.File
+import java.io.FileOutputStream
 import kotlin.math.roundToInt
 
 /**
@@ -54,3 +56,13 @@ val netWebp =
     "https://github.com/darryrzhong/FluxImageLoader/blob/main/app/src/main/res/drawable-xxxhdpi/bot.webp?raw=true"
 val netGif =
     "https://github.com/darryrzhong/FluxImageLoader/blob/main/app/src/main/res/drawable-xxxhdpi/stars.gif?raw=true"
+
+fun copyAssetToCache(context: Context, fileName: String): File {
+    val cacheFile = File(context.cacheDir, fileName)
+    context.assets.open(fileName).use { input ->
+        FileOutputStream(cacheFile).use { output ->
+            input.copyTo(output)
+        }
+    }
+    return cacheFile
+}

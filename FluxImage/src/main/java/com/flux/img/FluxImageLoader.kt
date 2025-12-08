@@ -26,14 +26,14 @@ import okhttp3.OkHttpClient
  *     @since   : 2025/2/14
  * </pre>
  */
-class CoilSingletonImageLoader private constructor() {
+class FluxImageLoader private constructor() {
 
     companion object {
-        private var instance: CoilSingletonImageLoader? = null
+        private var instance: FluxImageLoader? = null
 
         @JvmStatic
         fun getInstance() = instance ?: synchronized(this) {
-            instance ?: CoilSingletonImageLoader().also { instance = it }
+            instance ?: FluxImageLoader().also { instance = it }
         }
 
     }
@@ -69,7 +69,7 @@ class CoilSingletonImageLoader private constructor() {
     }
 
 
-    fun initCoil(context: Context) {
+    fun init(context: Context) {
         SingletonImageLoader.setSafe {
             ImageLoader.Builder(context)
                 .components {

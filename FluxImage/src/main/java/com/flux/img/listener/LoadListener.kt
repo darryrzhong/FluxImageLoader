@@ -11,7 +11,7 @@ package com.flux.img.listener
  */
 
 interface LoadListener<T> {
-    fun onSuccess(bitmap: T) {}
+    fun onSuccess(result: T) {}
     fun onStart() {}
     fun onCancel() {}
     fun onError(throwable: Throwable) {}
