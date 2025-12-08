@@ -76,6 +76,10 @@ class MyApplication : Application() {
 - **SVG**: 支持 SVG 格式解码
 - **视频**: 支持加载视频文件的第一帧或指定帧
 
+<p align="center">
+  <img src="./demo.gif" alt="picker" width="206" height="443"/>
+</p>
+
 ## 使用指南 (Kotlin)
 
 推荐使用 Kotlin 扩展方法进行调用，简洁高效。
