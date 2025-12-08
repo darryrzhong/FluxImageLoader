@@ -19,6 +19,18 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://jitpack.io")
         }
+        maven {
+            credentials {
+                val localProperties = java.util.Properties()
+                val localPropertiesFile = File(rootDir, "local.properties")
+                if (localPropertiesFile.exists()) {
+                    localPropertiesFile.inputStream().use { localProperties.load(it) }
+                }
+                username = localProperties.getProperty("gpr.user") ?: ""
+                password = localProperties.getProperty("gpr.key") ?: ""
+            }
+            url = uri("https://maven.pkg.github.com/skgmn/AnimatedWebPDecoder")
+        }
     }
 }
 

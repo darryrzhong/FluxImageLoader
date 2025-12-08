@@ -105,8 +105,8 @@ class FluxImageLoader private constructor() {
         }
     }
 
-    fun clearMemoryCache(context: Context){
-         context.imageLoader.memoryCache?.clear()
+    fun clearMemoryCache(context: Context) {
+        context.imageLoader.memoryCache?.clear()
     }
 
 }
