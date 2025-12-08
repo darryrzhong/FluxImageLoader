@@ -246,7 +246,20 @@ def GLIDE_VERSION = "5.0.5"
 implementation "com.github.zjupure:webpdecoder:2.7.4.16.0"
 // glide 4.10.0+
 implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
-annotationProcessor "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
+kapt "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
+```
+
+## Proguard
+```kotlin
+-keep public class com.bumptech.glide.integration.webp.WebpImage { *; }
+-keep public class com.bumptech.glide.integration.webp.WebpFrame { *; }
+-keep public class com.bumptech.glide.integration.webp.WebpBitmapFactory { *; }
+
+-keep class coil3.util.DecoderServiceLoaderTarget { *; }
+-keep class coil3.util.FetcherServiceLoaderTarget { *; }
+-keep class coil3.util.ServiceLoaderComponentRegistry { *; }
+-keep class * implements coil3.util.DecoderServiceLoaderTarget { *; }
+-keep class * implements coil3.util.FetcherServiceLoaderTarget { *; }
 ```
 
 ## Acknowledgments
