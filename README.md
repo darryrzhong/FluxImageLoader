@@ -1,4 +1,4 @@
-<img src="./logo.png" alt="FluxImageLoader"  />
+<img src="./logo.png" alt="FluxImageLoader"   width="523" />
 
 # FluxImageLoader
 
