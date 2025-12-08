@@ -10,10 +10,12 @@ import com.flux.img.load
 import com.flux.img.loadBlur
 import com.flux.img.loadCircle
 import com.flux.img.loadRounded
+import com.flux.img.loadWebpAnim
 import com.flux.img.transform.RoundedCornersType
 import com.flux.loader.ImgData
 import com.flux.loader.dp
 import com.flux.loader.netImg
+import com.flux.loader.netWebp
 
 /**
  * <pre>
@@ -69,7 +71,7 @@ class ImgLoadAdapter : BaseQuickAdapter<ImgData, QuickViewHolder>() {
                 }
 
                 6 -> {
-                    ivImg.loadCircle(netImg)
+                    ivImg.loadWebpAnim(netWebp)
                 }
 
                 7 -> {

@@ -40,7 +40,7 @@ val Float.sp: Float
         Resources.getSystem().displayMetrics
     )
 
-fun String.showTips(context: Context){
+fun String.showTips(context: Context) {
     Toast(context).apply {
         setText(this@showTips)
         duration = Toast.LENGTH_SHORT
@@ -49,3 +49,4 @@ fun String.showTips(context: Context){
 }
 
 val netImg = "https://github.com/darryrzhong/FluxImageLoader/blob/main/img_face.jpg?raw=true"
+val netWebp = "https://github.com/darryrzhong/FluxImageLoader/blob/main/face.webp?raw=true"

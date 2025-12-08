@@ -58,6 +58,7 @@ class HomeFragment : Fragment() {
                 ImgData(3, "高斯模糊"),
                 ImgData(4, "高斯模糊"),
                 ImgData(5, "高斯模糊"),
+                ImgData(6, "webp"),
             )
         )
     }
