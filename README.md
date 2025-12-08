@@ -250,6 +250,6 @@ annotationProcessor "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
 ```
 
 ## Acknowledgments
-[Coil3](https://coil-kt.github.io/coil/)
-[Glide](https://github.com/bumptech/glide)
-[GlideWebpDecoder](https://github.com/zjupure/GlideWebpDecoder)
+- [Coil3](https://coil-kt.github.io/coil/)
+- [Glide](https://github.com/bumptech/glide)
+- [GlideWebpDecoder](https://github.com/zjupure/GlideWebpDecoder)
