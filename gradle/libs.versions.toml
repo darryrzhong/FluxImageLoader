@@ -20,6 +20,7 @@ viewpager2 = "1.1.0"
 glideVersion = "5.0.5"
 glideWebpVersion = "2.7.4.16.0"
 coilVersion = "3.3.0"
+fluxImageVersion = "1.0.0"
 
 
 
@@ -47,6 +48,7 @@ coil = { group = "io.coil-kt.coil3", name = "coil", version.ref = "coilVersion" 
 coil-net = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coilVersion" }
 coil-gif = { group = "io.coil-kt.coil3", name = "coil-gif", version.ref = "coilVersion" }
 coil-video = { group = "io.coil-kt.coil3", name = "coil-video", version.ref = "coilVersion" }
+flux-image-loader = { group = "com.github.darryrzhong", name = "FluxImageLoader", version.ref = "fluxImageVersion" }
 
 
 [plugins]

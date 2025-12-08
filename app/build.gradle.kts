@@ -70,6 +70,7 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(projects.fluxImage)
+//    implementation(libs.flux.image.loader)
     implementation(libs.rv.adapter)
     implementation(libs.glide)
     kapt(libs.glide.compiler)

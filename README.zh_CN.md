@@ -5,8 +5,9 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![](https://jitpack.io/v/darryrzhong/FluxImageLoader.svg)](https://jitpack.io/#darryrzhong/FluxImageLoader)
 
-
 FluxImageLoader 是一个基于 [Coil3](https://coil-kt.github.io/coil/) + [OkHttp](https://square.github.io/okhttp/) 封装的 Android 图片加载库，旨在提供简单、高效且功能丰富的图片加载解决方案。
+
+简体中文 | [English](./README.md)
 
 ## 功能特性
 
@@ -43,7 +44,6 @@ dependencies {
     implementation 'com.github.darryrzhong:FluxImageLoader:1.0.0' // 请检查最新版本
 }
 ```
-
 
 ## 快速开始
 
@@ -288,6 +288,7 @@ kapt "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
 ```
 
 ## Proguard
+
 ```kotlin
 -keep public class com.bumptech.glide.integration.webp.WebpImage { *; }
 -keep public class com.bumptech.glide.integration.webp.WebpFrame { *; }
@@ -301,6 +302,7 @@ kapt "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
 ```
 
 ## Acknowledgments
+
 - [Coil3](https://coil-kt.github.io/coil/)
 - [Glide](https://github.com/bumptech/glide)
 - [GlideWebpDecoder](https://github.com/zjupure/GlideWebpDecoder)
