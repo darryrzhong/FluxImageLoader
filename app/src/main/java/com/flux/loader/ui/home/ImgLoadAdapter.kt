@@ -85,7 +85,7 @@ class ImgLoadAdapter : BaseQuickAdapter<ImgData, QuickViewHolder>() {
 
                 8 -> {
                     val file = copyAssetToCache(context, "video.mp4")
-                        ivImg.load(file)
+                    ivImg.load(file)
                 }
 
             }
