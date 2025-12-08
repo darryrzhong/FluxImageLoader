@@ -48,5 +48,9 @@ fun String.showTips(context: Context) {
     }
 }
 
-val netImg = "https://github.com/darryrzhong/FluxImageLoader/blob/main/img_face.jpg?raw=true"
-val netWebp = "https://github.com/darryrzhong/FluxImageLoader/blob/main/face.webp?raw=true"
+val netImg =
+    "https://github.com/darryrzhong/FluxImageLoader/blob/main/app/src/main/res/drawable-xxxhdpi/img_face.jpg?raw=true"
+val netWebp =
+    "https://github.com/darryrzhong/FluxImageLoader/blob/main/app/src/main/res/drawable-xxxhdpi/bot.webp?raw=true"
+val netGif =
+    "https://github.com/darryrzhong/FluxImageLoader/blob/main/app/src/main/res/drawable-xxxhdpi/stars.gif?raw=true"

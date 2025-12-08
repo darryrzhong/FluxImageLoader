@@ -9,11 +9,13 @@ import com.flux.img.R
 import com.flux.img.load
 import com.flux.img.loadBlur
 import com.flux.img.loadCircle
+import com.flux.img.loadGif
 import com.flux.img.loadRounded
 import com.flux.img.loadWebpAnim
 import com.flux.img.transform.RoundedCornersType
 import com.flux.loader.ImgData
 import com.flux.loader.dp
+import com.flux.loader.netGif
 import com.flux.loader.netImg
 import com.flux.loader.netWebp
 
@@ -75,11 +77,11 @@ class ImgLoadAdapter : BaseQuickAdapter<ImgData, QuickViewHolder>() {
                 }
 
                 7 -> {
-                    ivImg.loadCircle(netImg)
+                    ivImg.loadGif(netGif)
                 }
 
                 8 -> {
-                    ivImg.loadCircle(netImg)
+                    ivImg.load(com.flux.loader.R.raw.video)
                 }
 
                 0 -> {

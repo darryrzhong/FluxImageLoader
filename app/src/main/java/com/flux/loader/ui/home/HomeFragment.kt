@@ -59,6 +59,8 @@ class HomeFragment : Fragment() {
                 ImgData(4, "高斯模糊"),
                 ImgData(5, "高斯模糊"),
                 ImgData(6, "webp"),
+                ImgData(7, "gif"),
+                ImgData(8, "video_frame"),
             )
         )
     }
