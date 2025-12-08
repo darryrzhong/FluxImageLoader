@@ -248,3 +248,8 @@ implementation "com.github.zjupure:webpdecoder:2.7.4.16.0"
 implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
 annotationProcessor "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
 ```
+
+## Acknowledgments
+[Coil3](https://coil-kt.github.io/coil/)
+[Glide](https://github.com/bumptech/glide)
+[GlideWebpDecoder](https://github.com/zjupure/GlideWebpDecoder)
