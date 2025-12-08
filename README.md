@@ -1,5 +1,9 @@
 # FluxImageLoader
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![](https://jitpack.io/v/darryrzhong/FluxImageLoader.svg)](https://jitpack.io/#darryrzhong/FluxImageLoader)
+
+
 FluxImageLoader 是一个基于 [Coil3](https://coil-kt.github.io/coil/) + [OkHttp](https://square.github.io/okhttp/) 封装的 Android 图片加载库，旨在提供简单、高效且功能丰富的图片加载解决方案。
 
 ## 功能特性
@@ -10,6 +14,34 @@ FluxImageLoader 是一个基于 [Coil3](https://coil-kt.github.io/coil/) + [OkHt
 - **丰富变换**: 内置圆形、圆角、高斯模糊等常用图片变换。
 - **预加载/下载**: 支持图片预加载到内存或仅下载到磁盘。
 - **Java兼容**: 提供 `FluxLoader` 工具类，完美兼容 Java 调用。
+
+## 接入指南
+
+本文档提供了将 GalleryPicker 库集成到您的 Android 应用程序中的详细指南。
+
+### 1. 添加依赖
+
+在您的项目 `build.gradle` 文件中添加 JitPack 仓库和依赖项。
+
+**根目录 `build.gradle`:**
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+**App 模块 `build.gradle`:**
+
+```gradle
+dependencies {
+    implementation 'com.github.darryrzhong:FluxImageLoader:1.0.0' // 请检查最新版本
+}
+```
+
 
 ## 快速开始
 
