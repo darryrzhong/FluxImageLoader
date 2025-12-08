@@ -6,6 +6,7 @@ import android.widget.ImageView
 import com.chad.library.adapter4.BaseQuickAdapter
 import com.chad.library.adapter4.viewholder.QuickViewHolder
 import com.flux.img.R
+import com.flux.img.load
 import com.flux.img.loadBlur
 import com.flux.img.loadCircle
 import com.flux.img.loadRounded
@@ -41,14 +42,13 @@ class ImgLoadAdapter : BaseQuickAdapter<ImgData, QuickViewHolder>() {
         item?.let { data ->
             when (data.type) {
                 0 -> {
-                    ivImg.loadRounded(netImg, 12f.dp.toFloat())
+                    ivImg.load(netImg)
                 }
 
                 1 -> {
                     ivImg.loadRounded(
                         netImg,
-                        12f.dp.toFloat(),
-                        cornersType = RoundedCornersType.LEFT
+                        12f.dp.toFloat()
                     )
                 }
 
@@ -65,7 +65,7 @@ class ImgLoadAdapter : BaseQuickAdapter<ImgData, QuickViewHolder>() {
                 }
 
                 5 -> {
-                    ivImg.loadBlur(netImg, 10f, -1f.dp.toFloat())
+                    ivImg.loadBlur(netImg, 10f, -1f)
                 }
 
                 6 -> {

@@ -100,7 +100,7 @@ fun ImageView.loadRounded(
  * 加载高斯模糊
  * @param data
  * @param blurRadius 模糊半径(0-25之间,注意不是像素)
- * @param radius 圆角半径
+ * @param radius 圆角半径 -1圆形
  * @param cornersType RoundedCornersType  圆角类型
  *
  * */
